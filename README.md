@@ -3,6 +3,13 @@
 **Guitar DIY** là dự án dành cho người đam mê guitar và thích tự làm đồ điện tử: tự tay làm một món đồ của riêng mình để chơi cùng cây đàn.
 Sản phẩm đầu tiên của dự án là **uMIC** — micro WiFi ESP32-S3 + app Android quay video có tiếng đàn thu từ mic ngoài, tự động khớp tiếng với hình.
 
+<p align="center">
+  <img src="docs/images/umic-mounted-on-guitar.jpg" alt="uMIC mounted on the guitar top" width="420">
+  <img src="docs/images/app-home.jpg" alt="uMIC Android app home" width="200">
+</p>
+
+Bài giới thiệu + hướng dẫn đầy đủ (tiếng Việt): [docs/blog/guitar-diy-umic-gioi-thieu-va-huong-dan.md](docs/blog/guitar-diy-umic-gioi-thieu-va-huong-dan.md). File nạp sẵn (APK + firmware): [Releases](https://github.com/nguyminhdc78-del/guitar-diy/releases).
+
 ## uMIC: ESP32-S3 WiFi Microphone + Android Recorder
 
 Record synchronized audio and video using an ESP32-S3 microphone (48 kHz PCM over WiFi) with two modes:

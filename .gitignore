@@ -94,3 +94,6 @@ AGENTS.md
 release-manifest.json
 skeleton-rebuild-prompt-guide.md
 .repomixignore
+
+# raw product photos/videos (curated copies live in docs/images)
+image_product/
