@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/previewView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:scaleType="fillCenter" />
+
+    <!-- Tap-to-focus ring, positioned by CameraGestures -->
+    <View
+        android:id="@+id/focusRing"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/bg_focus_ring"
+        android:visibility="invisible" />
+
+    <!-- Top overlay: back, status chip, drop counter -->
+    <LinearLayout
+        android:id="@+id/overlayTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_overlay_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/space_s"
+        android:paddingBottom="@dimen/space_l">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="@dimen/touch_min"
+            android:layout_height="@dimen/touch_min"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/cd_back"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/umic_text" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipStatus"
+            style="@style/Widget.Umic.Chip.Status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_s"
+            tools:text="Đang ghi 03:12" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textDrops"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_s"
+            android:paddingEnd="@dimen/space_s"
+            android:textAppearance="@style/TextAppearance.Umic.Mono"
+            tools:text="mất 0 khung" />
+    </LinearLayout>
+
+    <!-- Timer with pulsing REC dot -->
+    <LinearLayout
+        android:id="@+id/timerGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_marginTop="96dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/recIndicator"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:contentDescription="@string/rec_indicator"
+            android:src="@drawable/ic_rec"
+            app:tint="@color/umic_red" />
+
+        <TextView
+            android:id="@+id/textTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/space_s"
+            android:shadowColor="#000000"
+            android:shadowRadius="8"
+            android:textAppearance="@style/TextAppearance.Umic.Display"
+            tools:text="03:12" />
+    </LinearLayout>
+
+    <!-- Bottom overlay: meter, message, progress, controls -->
+    <LinearLayout
+        android:id="@+id/overlayBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_overlay_bottom"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/gutter"
+        android:paddingTop="@dimen/space_xl"
+        android:paddingBottom="@dimen/space_m">
+
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:shadowColor="#000000"
+            android:shadowRadius="6"
+            android:textAppearance="@style/TextAppearance.Umic.Body"
+            tools:text="✅ Đã khớp tiếng ESP32 với video." />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenResult"
+            style="@style/Widget.Umic.Button.Text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/btn_open_result"
+            android:visibility="gone"
+            app:icon="@drawable/ic_play_arrow" />
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressMerge"
+            style="@style/Widget.Umic.Progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:max="100"
+            android:visibility="gone" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchManualWifi"
+            style="@style/Widget.Umic.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:text="@string/switch_manual_wifi"
+            android:textAppearance="@style/TextAppearance.Umic.Caption" />
+
+        <iot.guitar.ui.LevelMeterView
+            android:id="@+id/levelMeter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/meter_overlay_height"
+            android:layout_marginTop="@dimen/space_m" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m">
+
+            <ImageButton
+                android:id="@+id/btnFlipCamera"
+                android:layout_width="@dimen/touch_min"
+                android:layout_height="@dimen/touch_min"
+                android:layout_gravity="center_vertical|start"
+                android:background="@drawable/bg_circle_surface"
+                android:contentDescription="@string/cd_flip_camera"
+                android:src="@drawable/ic_flip_camera"
+                app:tint="@color/umic_text" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnRecord"
+                style="@style/Widget.Umic.RecFab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/cd_record"
+                android:src="@drawable/ic_rec" />
+
+            <!-- Zoom: tap cycles presets; pinch / double-tap on the preview also work -->
+            <TextView
+                android:id="@+id/textZoom"
+                android:layout_width="@dimen/touch_min"
+                android:layout_height="@dimen/touch_min"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/bg_circle_surface"
+                android:contentDescription="@string/cd_zoom"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.Umic.Label"
+                android:textColor="@color/umic_text"
+                tools:text="1×" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/textRecLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_s"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.Umic.Label"
+            tools:text="Bắt đầu quay" />
+    </LinearLayout>
+</FrameLayout>

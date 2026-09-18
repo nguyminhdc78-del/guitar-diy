@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/umic_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/gutter"
+        android:paddingTop="@dimen/space_s"
+        android:paddingBottom="@dimen/space_xl">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="@dimen/touch_min"
+                android:layout_height="@dimen/touch_min"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/cd_back"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/umic_text" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/space_s"
+                android:layout_weight="1"
+                android:text="@string/ext_title"
+                android:textAppearance="@style/TextAppearance.Umic.Title" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipStatus"
+                style="@style/Widget.Umic.Chip.Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Sẵn sàng" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Umic.Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            app:contentPadding="@dimen/card_padding">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textElapsed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textAppearance="@style/TextAppearance.Umic.Display" />
+
+                <iot.guitar.ui.LevelMeterView
+                    android:id="@+id/levelMeter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/meter_height"
+                    android:layout_marginTop="@dimen/space_m" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_s"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textLevel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAppearance="@style/TextAppearance.Umic.Mono"
+                        tools:text="-31.2 dBFS · đỉnh -18.0" />
+
+                    <TextView
+                        android:id="@+id/textDrops"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.Umic.Mono"
+                        tools:text="Khung mất: 0" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_m"
+                    android:text="@string/status_idle"
+                    android:textAppearance="@style/TextAppearance.Umic.Body" />
+
+                <TextView
+                    android:id="@+id/textFile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/space_xs"
+                    android:textAppearance="@style/TextAppearance.Umic.Caption"
+                    tools:text="File: umic-20260916-140000.wav" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchManualWifi"
+            style="@style/Widget.Umic.Switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_m"
+            android:minHeight="@dimen/touch_min"
+            android:text="@string/switch_manual_wifi"
+            android:textAppearance="@style/TextAppearance.Umic.Caption" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRecord"
+            style="@style/Widget.Umic.Button.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginTop="@dimen/space_m"
+            android:text="@string/btn_record"
+            android:textSize="18sp"
+            app:icon="@drawable/ic_rec" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMerge"
+            style="@style/Widget.Umic.Button.Tonal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_marginTop="@dimen/space_s"
+            android:text="@string/btn_go_merge"
+            app:icon="@drawable/ic_merge" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_l"
+            android:text="@string/ext_steps"
+            android:textAppearance="@style/TextAppearance.Umic.Caption" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

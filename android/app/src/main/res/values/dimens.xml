@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_s">8dp</dimen>
+    <dimen name="space_m">16dp</dimen>
+    <dimen name="space_l">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+    <dimen name="gutter">20dp</dimen>
+    <dimen name="card_padding">20dp</dimen>
+    <dimen name="radius_card">20dp</dimen>
+    <dimen name="radius_button">16dp</dimen>
+    <dimen name="radius_row">12dp</dimen>
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="rec_fab_size">88dp</dimen>
+    <dimen name="icon_card">40dp</dimen>
+    <dimen name="meter_height">56dp</dimen>
+    <dimen name="meter_overlay_height">12dp</dimen>
+    <dimen name="touch_min">48dp</dimen>
+</resources>

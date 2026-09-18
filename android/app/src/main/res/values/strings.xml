@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- UI strings are Vietnamese by product decision; code and logs stay English. -->
+<resources>
+    <string name="app_name">uMIC</string>
+
+    <!-- Home -->
+    <string name="home_title">uMIC</string>
+    <string name="home_subtitle">Micro ESP32 không dây cho video của bạn</string>
+    <string name="mode_in_app_title">Quay trong app</string>
+    <string name="mode_in_app_caption">Camera + micro ESP32, tự ghép khi dừng</string>
+    <string name="mode_external_title">Quay bằng Camera máy</string>
+    <string name="mode_external_caption">Ghi WAV nền, quay bằng app Camera, ghép sau</string>
+    <string name="card_merge_title">Ghép âm thanh vào video</string>
+    <string name="section_recent">Gần đây</string>
+    <string name="recent_empty">Chưa có bản ghi nào.</string>
+
+    <!-- Status chip (shared) -->
+    <string name="chip_idle">Sẵn sàng</string>
+    <string name="chip_connecting">Đang kết nối micro…</string>
+    <string name="chip_standby">Đã nối micro</string>
+    <string name="chip_recording">Đang ghi %1$s</string>
+    <string name="chip_stopping">Đang lưu…</string>
+    <string name="chip_merging">Đang ghép %1$d%%</string>
+    <string name="chip_error">Lỗi</string>
+    <string name="chip_mic_fault">Mic không có tín hiệu</string>
+
+    <!-- Record with the stock Camera (mode 1) -->
+    <string name="ext_title">Quay bằng Camera</string>
+    <string name="ext_steps">Bấm GHI ÂM → mở Camera → vỗ tay 1 lần → quay. Xong bấm DỪNG rồi vào Ghép.</string>
+    <string name="btn_record">Ghi âm</string>
+    <string name="btn_stop">Dừng</string>
+    <string name="switch_manual_wifi">WiFi thủ công (đã tự nối uMIC trong Cài đặt)</string>
+    <string name="status_idle">Sẵn sàng. Bật ESP32 rồi bấm Ghi âm.</string>
+    <string name="status_connecting_wifi">Đang kết nối WiFi uMIC…</string>
+    <string name="status_connecting_tcp">Đang kết nối tới micro…</string>
+    <string name="status_recording">Đang ghi</string>
+    <string name="status_stopping">Đang lưu file…</string>
+    <string name="status_merging">Đang ghép video…</string>
+    <string name="status_error">Lỗi: %1$s</string>
+    <string name="label_drops">Khung mất: %1$d</string>
+    <string name="label_file">File: %1$s</string>
+    <string name="label_level">%1$.1f dBFS · đỉnh %2$.1f</string>
+    <string name="btn_go_merge">Ghép vào video</string>
+    <string name="notif_permission_denied">Không có quyền thông báo: dịch vụ vẫn chạy nhưng không hiện trạng thái.</string>
+
+    <!-- Errors surfaced by the service -->
+    <string name="err_wifi_unavailable">Không kết nối được WiFi uMIC (bạn đã từ chối hộp thoại hoặc ESP32 chưa bật). Thử lại hoặc bật WiFi thủ công.</string>
+    <string name="err_wifi_lost">Mất kết nối WiFi với ESP32.</string>
+    <string name="err_stream">Mất luồng âm thanh: %1$s</string>
+    <string name="err_bad_sample_rate">Tần số mẫu không hợp lệ: %1$d (mong đợi 48000).</string>
+    <string name="err_service_timeout">Hệ thống giới hạn dịch vụ nền (6 giờ). Đã lưu file.</string>
+    <string name="err_storage">Không tạo được file WAV trong Music/uMIC.</string>
+
+    <!-- Notification -->
+    <string name="notif_channel_name">Ghi âm uMIC</string>
+    <string name="notif_channel_desc">Trạng thái ghi âm và ghép video</string>
+    <string name="notif_title">uMIC đang ghi âm</string>
+    <string name="notif_text">%1$s • mất %2$d khung</string>
+    <string name="notif_connecting">Đang kết nối tới micro ESP32…</string>
+    <string name="notif_standby">Đã nối micro — bấm nút trên mic để quay</string>
+    <string name="notif_action_stop">Dừng</string>
+    <string name="notif_merging_title">uMIC đang ghép video</string>
+    <string name="notif_merging">Đang ghép… %1$d%%</string>
+    <string name="notif_merge_done">Đã lưu %1$s</string>
+    <string name="notif_merge_failed">Ghép thất bại — đã giữ video gốc và WAV</string>
+
+    <!-- Record in app (mode 2) -->
+    <string name="inapp_title">Quay trong app</string>
+    <string name="perm_camera_denied">Cần quyền Camera để quay trong app.</string>
+    <string name="perm_mic_denied_hint">Không có mic điện thoại: chỉ khớp theo đồng hồ (±0,3 s).</string>
+    <string name="btn_open_settings">Mở Cài đặt</string>
+    <string name="status_arming">Đang kết nối micro ESP32…</string>
+    <string name="status_cam_starting">Đang khởi động camera…</string>
+    <string name="status_finalizing">Đang lưu video…</string>
+    <string name="rec_indicator">REC</string>
+    <string name="label_drops_short">mất %1$d khung</string>
+    <string name="err_camera_bind">Không mở được camera: %1$s</string>
+    <string name="err_camera_finalize">Lỗi lưu video: %1$s</string>
+    <string name="err_mic_lost_kept_files">Mất kết nối micro — đã giữ video gốc và WAV, ghép tay trong mục Ghép.</string>
+    <string name="saved_raw_and_wav">Đã lưu video gốc và WAV.</string>
+    <string name="cd_flip_camera">Đổi camera</string>
+    <string name="cd_zoom">Thu phóng camera</string>
+    <string name="warn_mic_no_signal">⚠ Mic không có tín hiệu — kiểm tra dây INMP441: L/R→GND, SD→GPIO5, VDD→3V3, GND.</string>
+    <string name="cd_record">Bắt đầu quay</string>
+    <string name="hint_button_ready">Bấm REC hoặc nút trên mic</string>
+    <string name="hint_button_stop">Bấm Dừng hoặc nút trên mic</string>
+    <string name="cd_stop">Dừng quay</string>
+    <string name="cd_back">Quay lại</string>
+    <string name="inapp_sync_good">✅ Đã khớp tiếng ESP32 với video.</string>
+    <string name="inapp_sync_clock_only">Khớp theo đồng hồ (không nhận ra tiếng chung). Giữ video gốc để ghép tay nếu cần.</string>
+    <string name="inapp_sync_unsure_kept_raw">⚠️ Khớp chưa chắc. Giữ video gốc để ghép tay nếu cần.</string>
+    <string name="inapp_merge_done">Đã lưu vào Movies/uMIC: %1$s</string>
+    <string name="inapp_merge_failed_kept_files">Ghép thất bại: %1$s. Video gốc và WAV vẫn còn trong Movies/uMIC và Music/uMIC.</string>
+    <string name="inapp_missing_inputs">Thiếu file để ghép (WAV chưa được ghi). Đã giữ video gốc.</string>
+
+    <!-- Merge screen (mode 1 tool) -->
+    <string name="merge_title">Ghép âm thanh vào video</string>
+    <string name="step_1">Bước 1</string>
+    <string name="step_2">Bước 2</string>
+    <string name="step_3">Bước 3</string>
+    <string name="btn_pick_video">Chọn video</string>
+    <string name="btn_pick_wav">Đổi file WAV</string>
+    <string name="label_no_video">Chưa chọn video</string>
+    <string name="label_no_wav">App sẽ tự chọn bản ghi cùng lúc với video</string>
+    <string name="label_wav_auto">WAV: %1$s (tự chọn theo thời gian)</string>
+    <string name="label_wav_manual">WAV: %1$s</string>
+    <string name="label_offset">Lệch: %1$+d ms</string>
+    <string name="row_earlier">Tiếng ESP32 sớm lên</string>
+    <string name="row_later">Tiếng ESP32 trễ lại</string>
+    <string name="btn_step_1000">1 s</string>
+    <string name="btn_step_100">0,1 s</string>
+    <string name="btn_step_10">10 ms</string>
+    <string name="label_fine_tune">Nghe thử phát cả tiếng gốc của video và tiếng ESP32. Nghe thành tiếng đôi/vọng = còn lệch: bấm một hàng nút, nghe lại; hết vọng là đúng.</string>
+    <string name="btn_resync">Đồng bộ lại</string>
+    <string name="btn_preview">Nghe thử</string>
+    <string name="btn_preview_stop">Dừng nghe</string>
+    <string name="btn_merge_start">Ghép</string>
+    <string name="btn_open_result">Mở video</string>
+    <string name="merge_progress">Đang ghép… %1$d%%</string>
+    <string name="merge_done">Đã lưu vào Movies/uMIC: %1$s</string>
+    <string name="merge_failed">Ghép thất bại: %1$s</string>
+    <string name="merge_failed_hdr">Không ghép được video này (HDR/Dolby Vision). Tắt HDR10+ trong Cài đặt Camera rồi quay lại.</string>
+    <string name="merge_need_inputs">Hãy chọn video (và file WAV).</string>
+    <string name="wav_picker_title">Chọn bản ghi (Music/uMIC)</string>
+    <string name="wav_picker_empty">Chưa có bản ghi nào. Hãy ghi âm trước.</string>
+    <string name="wav_not_found_for_video">Không tìm thấy bản ghi trùng thời gian với video — hãy chọn tay.</string>
+    <string name="sync_running">Đang tìm tiếng chung để khớp…</string>
+    <string name="sync_good">✅ Đã khớp. Bấm Nghe thử để kiểm tra rồi Ghép.</string>
+    <string name="sync_unsure">⚠️ Chưa chắc khớp. Bấm Nghe thử; nếu vọng, dùng nút tinh chỉnh.</string>
+    <string name="sync_none">❌ Không nhận ra điểm chung. Nghe thử và chỉnh tay.</string>
+    <string name="sync_no_audio">Video không có âm thanh nên không tự khớp được. Chỉnh tay.</string>
+    <string name="sync_failed">Tự đồng bộ thất bại: %1$s</string>
+</resources>

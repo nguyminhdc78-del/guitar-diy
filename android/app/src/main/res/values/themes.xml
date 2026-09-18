@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark-only Material 3 theme (same look in both system modes; UmicApp forces night mode). -->
+    <style name="Theme.Umic" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/umic_amber</item>
+        <item name="colorOnPrimary">@color/umic_on_amber</item>
+        <item name="colorPrimaryContainer">@color/umic_amber_container</item>
+        <item name="colorOnPrimaryContainer">@color/umic_amber</item>
+        <item name="colorSecondaryContainer">@color/umic_surface_high</item>
+        <item name="colorOnSecondaryContainer">@color/umic_text</item>
+        <item name="colorSurface">@color/umic_surface</item>
+        <item name="colorOnSurface">@color/umic_text</item>
+        <item name="colorSurfaceVariant">@color/umic_surface_high</item>
+        <item name="colorOnSurfaceVariant">@color/umic_text_dim</item>
+        <item name="colorSurfaceContainer">@color/umic_surface</item>
+        <item name="colorSurfaceContainerHigh">@color/umic_surface_high</item>
+        <item name="colorSurfaceContainerLow">@color/umic_surface_low</item>
+        <item name="colorOutline">@color/umic_outline</item>
+        <item name="colorOutlineVariant">@color/umic_outline_variant</item>
+        <item name="colorError">@color/umic_red</item>
+        <item name="colorOnError">#000000</item>
+        <item name="android:colorBackground">@color/umic_bg</item>
+        <item name="android:windowBackground">@color/umic_bg</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:enforceNavigationBarContrast">false</item>
+        <item name="android:textColorPrimary">@color/umic_text</item>
+        <item name="android:textColorSecondary">@color/umic_text_dim</item>
+    </style>
+</resources>

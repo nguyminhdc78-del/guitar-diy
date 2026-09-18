@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- uMIC design tokens: dark cinematic palette, one amber accent, semantic red/green/yellow. -->
+<resources>
+    <color name="umic_bg">#0B0B0F</color>
+    <color name="umic_surface">#15161C</color>
+    <color name="umic_surface_high">#1E2028</color>
+    <color name="umic_surface_low">#101116</color>
+    <color name="umic_outline">#2A2D37</color>
+    <color name="umic_outline_variant">#22242C</color>
+    <color name="umic_text">#F5F5F7</color>
+    <color name="umic_text_dim">#A0A4B0</color>
+    <color name="umic_text_disabled">#5C606B</color>
+    <color name="umic_amber">#FF8F00</color>
+    <color name="umic_amber_container">#3A2400</color>
+    <color name="umic_on_amber">#000000</color>
+    <color name="umic_red">#FF453A</color>
+    <color name="umic_green">#30D158</color>
+    <color name="umic_yellow">#FFD60A</color>
+    <color name="umic_scrim">#99000000</color>
+    <color name="umic_ripple_amber">#33FF8F00</color>
+</resources>
